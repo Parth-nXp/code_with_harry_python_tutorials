@@ -1,22 +1,40 @@
 '''
-Using Python External & Built In Modules
+F-Strings & String Formatting
 '''
 
-import random  # this is how we import the built in modules. We can check the modules via clicking ctrl+right click on module
+# String formating
+
+import math
+me = 'Harry'
+strng = "this is %s" % me
+print(strng)
+
+# or it can be done as
+a1 = 'code'
+str1 = 'this is %s %s' % (me, a1)
+print(str1)
 
 
-# to generate random number between 0 and 5
-random_integer = random.randint(0, 5)
-print(random_integer)
+# but if we have to insert many variables inside a string than this method is not convenient.
+# to overcome this we can actually use string formating as
+
+str2 = 'this is {0} {1}'
+b = str2.format(me, a1)
+print(b)
+# in this way we can also change the location or formating as
+str3 = 'this is {1} {0}'
+b2 = str3.format(me, a1)
+print(b2)
+
+# this string formating method is good but still readability is not good in this program.
+# So to further improve this program f-string is used
+# f in f-string stands for fast
+
+a2 = f'this is {me} {a1}'  # this is how f-string is used
+print(a2)
+
+# we can also use the module function also as
 
 
-# to generate random number between 0 and 1
-random_number = random.random()
-print(random_number)
-
-# to choose an element randomly from a list
-lst = ['Star Plus', 'DD1', 'Aaj Tak', 'CodeWithHarry']
-choice = random.choice(lst)
-print(choice)
-
-# to install any module run this in terminal pip install module_name
+a3 = f'this is {me} {a1} {math.cos(90)}'
+print(a3)
