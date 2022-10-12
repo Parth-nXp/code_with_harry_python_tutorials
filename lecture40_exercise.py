@@ -64,7 +64,16 @@ while chance < 10:
 
 if user_win < computer_win:
     print('So the winner is USER')
+    print(f'Computer: {computer_win}')
+    print(f'User: {user_win}')
+    print(f'Tie: {10 -computer_win -user_win}')
 elif user_win > computer_win:
     print('So the winner is COMPUTER')
+    print(f'Computer: {computer_win}')
+    print(f'User: {user_win}')
+    print(f'Tie: {10 -computer_win -user_win}')
 else:
     print('This is a tie')
+    print(f'Computer: {computer_win}')
+    print(f'User: {user_win}')
+    print(f'Tie: {10 -computer_win -user_win}')
