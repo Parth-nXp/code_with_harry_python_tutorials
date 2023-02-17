@@ -28,4 +28,17 @@ print(os.listdir("D:/")) # this returns as a list datatype
 #os.makedirs("This\that")
 
 # to change name of any file in the current working directory
-os.rename("harry.txt","codewithharry.txt") 
+# os.rename("harry.txt","codewithharry.txt") 
+
+# to get the environment variable
+print(os.environ.get("PATH"))
+
+# To join two paths to make one 
+print(os.path.join("D:/","/python tutorials"))
+
+# To check if any path exists or not
+print(os.path.exists("D:/")) # if true it exists, if false it does not exist
+
+# to check if any path is file or directory
+print(os.path.isfile("D:/")) # to check if file or not
+print(os.path.isdir("D:/")) # to check if directory or not
