@@ -27,3 +27,8 @@ next(search)
 search.send("harry") # first time it will take time since it is reading the book which is taking 4 seconds
 input("Press any key to continue")
 search.send("harry and")  # this time it wont take much time since it will run from while True:
+
+# we can also close the coroutine as
+search.close()
+# after this if we will send anything it will throw an error, since coroutine has been closed
+# search.send("harry") this will send an error
